@@ -14,9 +14,9 @@
 		B303564723ACBAE60096D040 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B303564623ACBAE60096D040 /* NavigationController.swift */; };
 		B303564923ACBAFD0096D040 /* LeftBarButtonItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B303564823ACBAFD0096D040 /* LeftBarButtonItemViewController.swift */; };
 		B303564B23ACBB170096D040 /* HideNavigationBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B303564A23ACBB170096D040 /* HideNavigationBarViewController.swift */; };
-		B303564E23ACBC8F0096D040 /* NavigationInteractiveTransitionWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B303564D23ACBC8F0096D040 /* NavigationInteractiveTransitionWrapper.swift */; };
 		B303565223ACE1B20096D040 /* InterruptNavigationControllerPopGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B303565123ACE1B20096D040 /* InterruptNavigationControllerPopGesture.swift */; };
 		B303565423AD004A0096D040 /* InterruptPopGestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B303565323AD004A0096D040 /* InterruptPopGestureViewController.swift */; };
+		B303565823AD05A60096D040 /* NavigationInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B303565723AD05A60096D040 /* NavigationInteractiveTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,9 +29,9 @@
 		B303564623ACBAE60096D040 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		B303564823ACBAFD0096D040 /* LeftBarButtonItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftBarButtonItemViewController.swift; sourceTree = "<group>"; };
 		B303564A23ACBB170096D040 /* HideNavigationBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideNavigationBarViewController.swift; sourceTree = "<group>"; };
-		B303564D23ACBC8F0096D040 /* NavigationInteractiveTransitionWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationInteractiveTransitionWrapper.swift; sourceTree = "<group>"; };
 		B303565123ACE1B20096D040 /* InterruptNavigationControllerPopGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterruptNavigationControllerPopGesture.swift; sourceTree = "<group>"; };
 		B303565323AD004A0096D040 /* InterruptPopGestureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterruptPopGestureViewController.swift; sourceTree = "<group>"; };
+		B303565723AD05A60096D040 /* NavigationInteractiveTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationInteractiveTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,8 +81,8 @@
 		B303564C23ACBC7A0096D040 /* NavigationControllerPopGesture */ = {
 			isa = PBXGroup;
 			children = (
-				B303564D23ACBC8F0096D040 /* NavigationInteractiveTransitionWrapper.swift */,
 				B303565123ACE1B20096D040 /* InterruptNavigationControllerPopGesture.swift */,
+				B303565723AD05A60096D040 /* NavigationInteractiveTransition.swift */,
 			);
 			path = NavigationControllerPopGesture;
 			sourceTree = "<group>";
@@ -159,7 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B303564723ACBAE60096D040 /* NavigationController.swift in Sources */,
-				B303564E23ACBC8F0096D040 /* NavigationInteractiveTransitionWrapper.swift in Sources */,
+				B303565823AD05A60096D040 /* NavigationInteractiveTransition.swift in Sources */,
 				B303565423AD004A0096D040 /* InterruptPopGestureViewController.swift in Sources */,
 				B303564923ACBAFD0096D040 /* LeftBarButtonItemViewController.swift in Sources */,
 				B303563123ACBA350096D040 /* AppDelegate.swift in Sources */,

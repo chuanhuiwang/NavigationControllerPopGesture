@@ -1,5 +1,5 @@
 //
-//  NavigationInteractiveTransitionWrapper.swift
+//  NavigationInteractiveTransition.swift
 //  NavigationControllerPopGesture
 //
 //  Created by 王传辉 on 2019/12/20.
@@ -8,15 +8,14 @@
 
 import UIKit
 
-open class NavigationInteractiveTransitionWrapper: NSObject {
+open class NavigationInteractiveTransition: NSObject {
     
     public private(set) weak var navigationController: UINavigationController?
-    public let wrapped: UIGestureRecognizerDelegate
+    public let wrapped: UIGestureRecognizerDelegate?
     
-    //wrapped传入navigationController.interactivePopGestureRecognizer?.delegate
-    public init(navigationController: UINavigationController, wrapped: UIGestureRecognizerDelegate) {
+    public init(_ navigationController: UINavigationController) {
         self.navigationController = navigationController
-        self.wrapped = wrapped
+        self.wrapped = navigationController.interactivePopGestureRecognizer?.delegate
     }
     
     open func navigationControllerShouldPop() -> Bool {
@@ -56,13 +55,13 @@ open class NavigationInteractiveTransitionWrapper: NSObject {
     
 }
 
-extension NavigationInteractiveTransitionWrapper: UIGestureRecognizerDelegate {
+extension NavigationInteractiveTransition: UIGestureRecognizerDelegate {
     
     public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         if navigationControllerShouldInterruptPopGesture(gestureRecognizer) {
             return false
         }
-        if let result = wrapped.gestureRecognizerShouldBegin?(gestureRecognizer) {
+        if let result = wrapped?.gestureRecognizerShouldBegin?(gestureRecognizer) {
             return result
         }
         return true
@@ -79,7 +78,7 @@ extension NavigationInteractiveTransitionWrapper: UIGestureRecognizerDelegate {
     }
         
     public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
-        if let result = wrapped.gestureRecognizer?(gestureRecognizer, shouldRecognizeSimultaneouslyWith: otherGestureRecognizer) {
+        if let result = wrapped?.gestureRecognizer?(gestureRecognizer, shouldRecognizeSimultaneouslyWith: otherGestureRecognizer) {
             return result
         }
         return true

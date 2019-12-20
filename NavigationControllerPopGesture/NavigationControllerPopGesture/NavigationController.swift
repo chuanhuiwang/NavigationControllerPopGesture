@@ -10,16 +10,14 @@ import UIKit
 
 class NavigationController: UINavigationController {
     
-    var wrapper: NavigationInteractiveTransitionWrapper?
+    var interactive: NavigationInteractiveTransition?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        if let delegate = self.interactivePopGestureRecognizer?.delegate {
-            wrapper = NavigationInteractiveTransitionWrapper(navigationController: self, wrapped: delegate)
-            self.interactivePopGestureRecognizer?.delegate = wrapper
-        }
+        interactive = NavigationInteractiveTransition(self)
+        self.interactivePopGestureRecognizer?.delegate = interactive
         topViewController?.title = "root"
     }
     
