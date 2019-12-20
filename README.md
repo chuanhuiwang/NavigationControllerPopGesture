@@ -1,0 +1,2 @@
+# NavigationControllerPopGesture
+解决UINavigationController的pop手势失效的问题
